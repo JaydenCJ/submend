@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460" font-family="Menlo, Consolas, monospace" font-size="13">
+  <rect width="760" height="460" rx="10" fill="#101418"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="380" y="27" fill="#8b949e" text-anchor="middle" font-size="12">submend — the git submodule doctor</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="60"><tspan fill="#7ee787">$</tspan> submend doctor</text>
+    <text x="24" y="86"><tspan fill="#79c0ff">submend doctor</tspan> — main @ c0031db (3 submodules)</text>
+    <text x="24" y="116" fill="#d2a8ff">libs/parser</text>
+    <text x="24" y="136">  <tspan fill="#f85149">SM02  error</tspan>   URL in .git/config differs from .gitmodules</text>
+    <text x="24" y="154" fill="#8b949e">        .gitmodules: /srv/upstream/parser-moved</text>
+    <text x="24" y="172" fill="#8b949e">        .git/config: /srv/upstream/parser</text>
+    <text x="24" y="190">        fix: <tspan fill="#7ee787">git submodule sync -- libs/parser</tspan>   <tspan fill="#8b949e">(reversible)</tspan></text>
+    <text x="24" y="214">  <tspan fill="#d29922">SM04  warning</tspan> checked-out commit differs from the recorded one</text>
+    <text x="24" y="232" fill="#8b949e">        recorded 19aab7c, checked out 5b66941 — 1 commit ahead</text>
+    <text x="24" y="250">        fix: <tspan fill="#7ee787">git -C libs/parser checkout --detach 19aab7c</tspan>   <tspan fill="#8b949e">(reversible)</tspan></text>
+    <text x="24" y="280" fill="#d2a8ff">tools</text>
+    <text x="24" y="300">  <tspan fill="#f85149">SM01  error</tspan>   submodule is declared but not initialized</text>
+    <text x="24" y="318">        fix: <tspan fill="#7ee787">git submodule update --init -- tools</tspan>   <tspan fill="#8b949e">(reversible)</tspan></text>
+    <text x="24" y="348" fill="#d2a8ff">vendor/blob</text>
+    <text x="24" y="368">  <tspan fill="#d29922">SM07  warning</tspan> submodule has uncommitted changes to tracked files</text>
+    <text x="24" y="386" fill="#8b949e">        manual: commit or restore — submend never touches uncommitted work</text>
+    <text x="24" y="418">3 submodules scanned: <tspan fill="#d29922">4 findings</tspan> (2 errors, 2 warnings, 0 info), <tspan fill="#7ee787">3 auto-fixable</tspan></text>
+    <text x="24" y="438" fill="#8b949e">run `submend fix` to apply safe fixes — every change lands in an undo journal</text>
+  </g>
+</svg>
